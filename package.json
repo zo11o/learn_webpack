@@ -2,10 +2,10 @@
   "name": "learn_webpack",
   "version": "1.0.0",
   "description": "从零配置完整项目 webpack",
-  "main": "index.js",
+  "main": "./src/main.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --config=build/webpack.config.js --mode=development",
-    "build": "cross-env NODE_ENV=production webpack --mode=production"
+    "build": "cross-env NODE_ENV=production node build/build.js"
   },
   "repository": {
     "type": "git",
@@ -18,12 +18,17 @@
   },
   "homepage": "https://github.com/zo11o/learn_webpack#readme",
   "dependencies": {
+    "chalk": "^3.0.0",
     "cross-env": "^6.0.3",
     "css-loader": "^3.2.0",
+    "ora": "^4.0.3",
     "rimraf": "^3.0.0",
     "webpack-chain": "^6.0.0"
   },
   "devDependencies": {
+    "css-loader": "^3.3.2",
+    "extract-css-loader": "^0.0.1",
+    "mini-css-extract-plugin": "^0.8.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   }
